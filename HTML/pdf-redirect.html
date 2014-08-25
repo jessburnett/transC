@@ -1,0 +1,91 @@
+<html>
+<head><title>North Baja Pipeline Tariff</title>
+<!--
+
+	This page is required to redirect the browser to the bookmarks inside the NorthBajaTariff.pdf file.
+
+	The reason direct links to the bookmarks aren't used is becuase if sequential calls are made to the PDF file from the menu, 
+    the second and subsequent links will not jump to the bookmark.
+
+	Only if the browser goes to 'ANY' page first will it properly jump to the bookmark.
+
+
+History:
+------------------------
+Rewrote page to use the updatelinks.js so we only have to maintain one set of server info, etc.
+Trevor Churchill
+February 2014
+
+
+-->
+<script type="text/javascript" src="assets/js/jquery-1.11.1.min.js"></script>
+<!-- <script language="javascript" type="text/javascript" src="/media/scripts/updatelinks.js"></script> -->
+<script language="javascript" type="text/javascript">
+
+$(document).ready(function(){
+	// Ensure the links are updated by updatelinks.js first
+	setTimeout(loadPDFURL(),300);
+});
+
+function loadPDFURL(){
+	
+	// Grab the bookmark value from the URL. i.e. driver.htm?bm=tsindex
+	var bm = GetValue('bm');
+	if (bm=="" || bm== null || bm=="null"){bm="titlepage";}
+	
+	gotoURL = eval("$(\"#" + bm + "\").attr('href')");
+	
+	if (gotoURL =="" || gotoURL==null){
+			gotoURL = "http://tariff.northbajapipeline.com/ITASCBaja/Tariff/NorthBajaTariff.pdf#titlepage";
+	}
+	
+	//alert("gotoURL: " + gotoURL + "\n\nbm: " + bm);
+	window.location.replace(gotoURL);	
+}
+
+function GetValue( name ){  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");  var regexS = "[\\?&]"+name+"=([^&#]*)";  var regex = new RegExp( regexS );  var results = regex.exec( window.location.href );  if( results == null )    return "";  else    return results[1];}
+
+</script>
+
+</head>
+<body>
+Loading...
+
+<!-- Default Link	 -->
+<!-- /info_post/driver.htm?bm=titlepage			Title Sheet/Section -->
+<!-- /info_post/driver.htm?bm=titlepage			Entire Tariff -->
+<!-- /info_post/driver.htm						Tariff Search -->
+<!-- /info_post/driver.htm						Download Tariff -->
+<!-- /info_post/driver.htm						Search -->
+<a id="titlepage" href="http://tariff.northbajapipeline.com/ITASCBaja/Tariff/NorthBajaTariff.pdf#titlepage"></a>
+
+<!-- /info_post/driver.htm?bm=toc -> tstoc		Table of Contents -->
+<a id="toc" href="http://tariff.northbajapipeline.com/ITASCBaja/Tariff/NorthBajaTariff.pdf#tstoc"></a>
+
+<!-- /info_post/driver.htm?bm=prelimstat		Preliminary Statement -->
+<a id="prelimstat" href="http://tariff.northbajapipeline.com/ITASCBaja/Tariff/NorthBajaTariff.pdf#prelimstat"></a> 
+
+<!-- /info_post/driver.htm?bm=prelimstat		Map -->
+<a id="maps" href="http://tariff.northbajapipeline.com/ITASCBaja/Tariff/NorthBajaTariff.pdf#maps"></a> 
+
+<!-- /info_post/driver.htm?bm=rates				Currently Effective Rates -->
+<a id="rates" href="http://tariff.northbajapipeline.com/ITASCBaja/Tariff/NorthBajaTariff.pdf#rates"></a>
+
+<!-- /info_post/driver.htm?bm=ratesch			Rate Schedules -->
+<a id="ratesch" href="http://tariff.northbajapipeline.com/ITASCBaja/Tariff/NorthBajaTariff.pdf#ratesch"></a>
+
+<!-- /info_post/driver.htm?bm=gtc				General Terms and Conditions -->
+<a id="gtc" href="http://tariff.northbajapipeline.com/ITASCBaja/Tariff/NorthBajaTariff.pdf#gtc"></a>
+
+<!-- /info_post/driver.htm?bm=srvagr			Form of Service Agreement -->
+<a id="srvagr" href="http://tariff.northbajapipeline.com/ITASCBaja/Tariff/NorthBajaTariff.pdf#srvagr"></a>
+
+<!-- /info_post/driver.htm?bm=tsindex			Sheet/Section Index -->
+<a id="tsindex" href="http://tariff.northbajapipeline.com/ITASCBaja/Tariff/NorthBajaTariff.pdf#tsindex"></a>
+
+<!-- /info_post/driver.htm?bm=quality			Sheet/Section Index -->
+<a id="quality" href="http://tariff.northbajapipeline.com/ITASCBaja/Tariff/NorthBajaTariff.pdf#quality"></a>
+
+</body>
+</html>
+

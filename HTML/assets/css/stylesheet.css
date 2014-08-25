@@ -1,0 +1,522 @@
+@font-face {
+    font-family: 'clearsans-reg';
+    src: url('../fonts/ClearSans-Regular-webfont.eot');
+    src: url('../fonts/ClearSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ClearSans-Regular-webfont.woff') format('woff'),
+         url('../fonts/ClearSans-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/ClearSans-Regular-webfont.svg#clear_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'clearsans-bold';
+    src: url('../fonts/ClearSans-Bold-webfont.eot');
+    src: url('../fonts/ClearSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ClearSans-Bold-webfont.woff') format('woff'),
+         url('../fonts/ClearSans-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/ClearSans-Bold-webfont.svg#clear_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'roboto-cn-reg';
+    src: url('../fonts/RobotoCondensed-Regular-webfont.eot');
+    src: url('../fonts/RobotoCondensed-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/RobotoCondensed-Regular-webfont.woff') format('woff'),
+         url('../fonts/RobotoCondensed-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/RobotoCondensed-Regular-webfont.svg#roboto_condensedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto-reg';
+    src: url('../fonts/Roboto-Regular-webfont.eot');
+    src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto-black';
+    src: url('../fonts/Roboto-Black-webfont.eot');
+    src: url('../fonts/Roboto-Black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Black-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Black-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Black-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*************************************************************
+
+	Global
+
+*************************************************************/
+
+body {
+	border:0;
+	margin:0;
+	padding:0;
+	background-color: #fff;
+}
+
+#app-container {
+	width:100%;
+	margin: 0 auto;
+	background-color:#fff;
+}
+
+#bg {
+	position:fixed; 
+	top:0; 
+	left:0; 
+	width:100%;
+	z-index: -1;
+}
+
+header,
+main .container,
+footer .container {
+	width:1000px;
+}
+
+/*************************************************************
+
+	Header and Navigation
+
+*************************************************************/
+
+header:after {
+	/* fix non-floated collapsing parent */
+	content: " ";
+	display: block; 
+	height: 0; 
+	clear: both; 
+}
+
+header {
+	position:relative;
+	height: 52px;
+	margin:0 auto;
+	background: #fff;
+	overflow: visible;
+	z-index:1000;
+}
+
+#logo {
+	position:absolute;
+	top:10px;
+	left:13px;
+	background-color: #fff;
+}
+
+#pipeline-nav {
+	display:inline-block;
+	position: absolute;
+	top: 10px;
+	left: 220px;
+}
+
+#select-pipeline {
+	display: inline-block;
+	position: absolute;
+	padding: 7px;
+	text-transform: uppercase;
+	border: solid 1px #ccc;
+	width: 250px;
+	color:#1c9ed5;
+	font:normal 16px/16px roboto-black;
+	cursor: pointer;
+}
+
+#switch-pipeline-list {
+	position: absolute;
+	display: none;
+	width: 250px;
+	top: 16px;
+	left: -40px;
+	list-style-type: none;
+}
+
+#switch-pipeline-list.open {
+	display: inline-block;
+}
+
+#switch-pipeline-list a {
+	display:block;
+	color: #1c9ed5;
+	background-color: #fff;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	width:244px;
+	font:normal 14px/14px roboto-reg;
+	padding: 10px;
+}
+
+#switch-pipeline-list li a:link,
+#switch-pipeline-list li a:visited {
+	color: #666;
+	text-decoration: none;
+}
+
+#switch-pipeline-list li a.active,
+#switch-pipeline-list li a:hover  {
+	background-color: #07993a;
+	color: #fff;
+}
+
+
+
+#select-pipeline:after {
+    position:absolute;
+    font-family: FontAwesome;
+    top:8px;
+    left:245px;
+    content: "\f054";
+    color:#b3b3b3;
+}
+
+#main-nav,
+#main-nav ul {
+	width: 200px;
+	position: relative;
+}
+
+#main-nav ul {
+	border-right:solid 1px #ccc;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-family: roboto-black, Arial, Helvetica, sans-serif;
+}
+
+#main-nav ul a {
+	display: block;
+	padding: 12px 12px 12px 15px;
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+	font:normal 14px/14px roboto-black, Arial, Helvetica, sans-serif;
+}
+
+#main-nav ul ul a {
+	color: #1c9ed5;
+	background-color: #dcddde;
+	border-bottom: 1px solid #ccc;
+}
+
+#main-nav ul li a:link,
+#main-nav ul li a:visited {
+	color: #1c9ed5;
+	text-decoration: none;
+}
+
+#main-nav ul li a.active,
+#main-nav ul li a:hover  {
+	background-color: #1c9ed5;
+	color: #fff;
+}
+
+#main-nav ul li ul li a:link,
+#main-nav ul li ul li a:visited {
+	color: #606061;
+}
+
+#main-nav ul li ul li a.active,
+#main-nav ul li ul li a:hover  {
+	color: #2e3069;
+	background-color: #b6d0dc;
+}
+
+#main-nav ul li ul.closed {
+	display:none;
+}
+
+#main-nav ul li {
+	position:relative;
+}
+
+#main-nav ul li a.cat:after {
+    position:absolute;
+    font-family: FontAwesome;
+    top:14px;
+    left:180px;
+    content: "\f054";
+    color:#b3b3b3;
+}
+
+#main-nav ul li a.active:after,
+#main-nav ul li a.cat:hover:after {
+	color:#fff;
+}
+
+#main-nav ul a.fa-rotate:after {
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+/*************************************************************
+
+	Main Content
+
+*************************************************************/
+
+main {
+	display: block;
+	width:100%;
+	border-top:solid 1px #ccc;
+	border-bottom:solid 1px #ccc;
+	background-color:#fff;
+}
+
+main .container {
+	position:relative;
+	margin:0 auto;
+	min-height: 500px;
+	background-color:#f6f6f7;
+	border-left:solid 1px #f0f0f0;
+	border-right:solid 1px #f0f0f0;
+	padding-bottom:20px;
+}
+
+main:after,
+main .container:after {
+	/* fix non-floated collapsing parent */
+	content: " ";
+	display: block; 
+	height: 0; 
+	clear: both; 
+}
+
+#content {
+	position:relative;
+	clear:none;
+	width:780px;
+	float:right;
+	font:normal 12px/12px roboto-reg;
+}
+
+#breadcrumb {
+	color: #666;
+	font:normal 10px/10px roboto-reg;
+	margin-top:10px;
+}
+
+#breadcrumb a {
+	color: #666;
+	text-decoration: none;
+	border-bottom: dotted 1px #666; 
+}
+
+#breadcrumb a:link,
+#breadcrumb a:visited {
+	text-decoration: none;
+}
+
+#breadcrumb a.active,
+#breadcrumb a:hover  {
+	color: #07993a;
+	border-bottom: dotted 1px #07993a;
+}
+
+#content h1 {
+	font:normal 16px/16px roboto-black;
+	color:#07993a;
+	margin:25px 0 20px 0;
+}
+
+/*************************************************************
+
+	Form Styles
+
+*************************************************************/
+
+.layout-row {
+	width:800px;
+	font:normal 14px/14px roboto-reg;
+	margin:10px 0 0 0;
+}
+
+.layout-row div {
+	display:inline-block;
+}
+
+.col-130 {
+	width:140px;
+}
+
+.col-150 {
+	width:150px;
+}
+
+.col-170 {
+	width:170px;
+}
+
+.m-left-50 {
+	margin-left:50px;
+}
+
+#content h2 {
+	display:inline-block;
+	font:normal 16px/16px clearsans-bold;
+	color:#07993a;
+	margin:15px 0 8px 0;
+	padding:0;
+}
+
+.layout-row h3 {
+	display:inline-block;
+	font:normal 14px/14px roboto-black;
+	margin:0;
+	padding:0;
+}
+
+#content table {
+    border-collapse: collapse;
+    border-bottom:solid 1px #ccc;
+}
+
+#content table th,
+#content table td {
+	text-align: left;
+	vertical-align: top;
+}
+
+#content table th {
+    border-top:solid 3px #07993a;
+    border-bottom:solid 1px #ccc;
+    background:#fff;
+    color:#000;
+    font:normal 12px/12px roboto-black;
+    padding:7px;
+
+}
+
+#content table th,
+#content table th,
+#content table td {
+	border-left:solid 1px #ccc;
+	border-right:solid 1px #ccc;
+}
+
+#content table td {
+	background:#fff;
+    color:#000;
+    font:normal 12px/12px roboto-cn-reg;
+    padding:7px;
+}
+
+#content table td.light-blue {
+	background-color: #e8f5fb;
+}
+
+
+#content table td a {
+	color: #07993a;
+	text-decoration: none;
+	border-bottom: dotted 1px #07993a;
+}
+
+#content table td a:link,
+#content table td a:visited {
+	color: #07993a;
+	text-decoration: none;
+}
+
+#content table td a.active,
+#content table td a:hover  {
+	color: #07993a;
+	border-bottom: solid 1px #07993a;
+}
+/*************************************************************
+
+	Footer
+
+*************************************************************/
+
+footer {
+	width:100%;
+	height: 30px;
+	background-color:#fff;
+	/*border-top: solid 4px #f5163f;*/
+}
+
+footer .container {
+	position:relative;
+	margin:0 auto;
+	height: 30px;
+	background-color:#fff;
+}
+
+.ico-settings	{
+	position: absolute;
+	width:15px;
+	height:15px;
+	top:-20px;
+	left:10px;
+	z-index:100;
+}
+
+.ico-settings:hover	{
+	cursor: pointer;
+	/*-webkit-animation-name:             rotate;*/ 
+    -webkit-animation-duration:         0.5s; 
+    -webkit-animation-iteration-count:  1;
+    -webkit-transition-timing-function: linear;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to { 
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+#mark {
+	float:right;
+	width:30px;
+	height: 30px;
+	background-color:#f5163f;
+}
+
+#mark img {
+	width:20px;
+	height:20px;
+	margin:5px 0 0 4px;
+}
+
+/*************************************************************
+
+	SVG CSS
+
+*************************************************************/
+
+.path-cog {
+  	fill: #bbb; 
+}
+
+.path-cog:hover {
+  	fill: #aaa; 
+}
+
+
+
+
+
+
