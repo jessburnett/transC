@@ -1,14 +1,16 @@
 .ui-multiselect-hasfilter ul { position:relative; top:2px }
-.ui-multiselect-filter { margin-right:10px; font-size:11px; margin-bottom: 10px;}
+/*.ui-multiselect-filter { margin-right:7px; font-size:11px; margin-bottom: 7px;}*/
 .ui-multiselect-filter input {
-  width: 172px; 
-  font-size:12px; 
-  margin:5px; 
-  height:25px; 
-  padding:5px; 
-  border:1px solid #07993a;
-  -webkit-appearance:textfield;
-  -webkit-box-sizing:content-box; 
+width: 198px;
+font-size: 11px;
+color: #666;
+height: 20px;
+padding: 3px 3px 3px 7px;
+margin-left: -4px;
+margin-top: -3px;
+border: 1px solid #07993a;
+-webkit-appearance: textfield;
+-webkit-box-sizing: content-box;
 }
 
 input[type=checkbox] {
@@ -17,11 +19,12 @@ input[type=checkbox] {
 .ui-multiselect, span, label { 
   font:normal 12px/12px roboto-reg,arial,helvetica,sans-serif; 
 }
+.ui-state-hover { background: #fff; }
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { background: #fff; font-weight: normal/*{fwDefault}*/; color: #555/*{fcHover}*/; }
 
 span, label {  padding: 2px; }
 
 .ui-multiselect-all { color: #666; }
 
 a, a:hover { text-decoration: none; }
-
-.ui-multiselect .ui-widget .ui-state-default .ui-state-active, .ui-corner-all .ui-state-hover, .ui-state-hover, .ui-state-focus { background: #07993a; color: #fff !important; }

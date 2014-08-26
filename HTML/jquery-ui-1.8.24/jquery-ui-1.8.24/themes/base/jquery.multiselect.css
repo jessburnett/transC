@@ -1,10 +1,10 @@
 
-.ui-multiselect { padding: 10px; border: 1px solid #ccc; text-align: left; color: #555;}
+.ui-multiselect { border: 1px solid #ccc; text-align: left; color: #666; padding: 5px 10px 5px 3px;}
 .ui-multiselect span.ui-icon { float:right }
 .ui-multiselect-single .ui-multiselect-checkboxes input { position:absolute !important; top: auto !important; left:-9999px; }
-.ui-multiselect-single .ui-multiselect-checkboxes label { padding:2px; }
+
 .ui-multiselect-header ul { font-size:0.9em }
-.ui-multiselect-header ul li { float:left; padding:0 10px 0 0 }
+.ui-multiselect-header ul li { float:left; }
 .ui-multiselect-header a { text-decoration:none; color: #555; }
 .ui-multiselect-header span.ui-icon { float:left }
 .ui-multiselect-header li.ui-multiselect-close { float:right; text-align:right; padding-right:0 }
