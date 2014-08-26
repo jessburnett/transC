@@ -6,8 +6,9 @@
   margin:5px; 
   height:25px; 
   padding:2px; 
-  border:1px solid #07993a;
+  border:1px solid #07993a !important;
   -webkit-appearance:textfield;
   -webkit-box-sizing:content-box; 
 }
 
+.ui-corner-all .ui-state-hover, .ui-state-hover { background: #07993a; color: #fff; }
