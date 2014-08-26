@@ -22,7 +22,8 @@
       label: '',/*create empty text label appearing left of input search field, which is a configuration object when you initialize multiselectfilter()*/
       width: null, /* override default width set in css file (px). null will inherit */
       placeholder: 'Search...',
-      autoReset: false
+      autoReset: false,
+      addClass: 'default-search'
     },
 
     _create: function() {
