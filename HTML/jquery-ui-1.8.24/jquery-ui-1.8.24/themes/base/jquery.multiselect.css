@@ -29,3 +29,10 @@ span.cat:after {
     transform: rotate(90deg);
     color: #b3b3b3;
 }
+
+a, a:hover { text-decoration: none; }
+
+.ui-helper-reset a.ui-multiselect-all, .ui-helper-reset a.ui-multiselect-none {
+  background-color: #07993a; 
+  color: #fff;
+}
