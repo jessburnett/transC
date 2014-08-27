@@ -3,9 +3,10 @@
 .ui-multiselect span.ui-icon { float:right }
 .ui-multiselect-single .ui-multiselect-checkboxes input { position:absolute !important; top: auto !important; left:-9999px; }
 
-.ui-multiselect-header ul { font-size:0.9em }
-.ui-multiselect-header ul li { float:left; }
-.ui-multiselect-header a { text-decoration:none; color: #555; }
+.ui-multiselect-header ul { background-color: #07993a; }
+
+.ui-multiselect-header ul li { display: inline-block; }
+.ui-multiselect-header a { text-decoration:none; color: #fff; }
 .ui-multiselect-header span.ui-icon { float:left }
 .ui-multiselect-header li.ui-multiselect-close { float:right; text-align:right; padding-right:0 }
 
@@ -32,7 +33,4 @@ span.cat:after {
 
 a, a:hover { text-decoration: none; }
 
-.ui-helper-reset a.ui-multiselect-all, .ui-helper-reset a.ui-multiselect-none {
-  background-color: #07993a; 
-  color: #fff;
-}
+.ui-helper-reset { line-height: 2.5; } /*override from core.css */
