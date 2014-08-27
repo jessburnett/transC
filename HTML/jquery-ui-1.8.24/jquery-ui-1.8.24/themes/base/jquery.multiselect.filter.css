@@ -24,12 +24,3 @@ input[type=checkbox] {
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { background: #fff; font-weight: normal/*{fwDefault}*/; color: #555/*{fcHover}*/; }
 
 span, label {  padding: 2px; }
-
-.ui-multiselect-all { color: #666; }
-
-a, a:hover { text-decoration: none; }
-
-.ui-helper-reset a.ui-multiselect-all, .ui-helper-reset a.ui-multiselect-none {
-  background-color: #07993a; 
-  color: #fff;
-}
