@@ -17,7 +17,10 @@
  *   http://www.opensource.org/licenses/mit-license.php
  *   http://www.gnu.org/licenses/gpl.html
  *
+
  */
+
+
 (function($, undefined) {
 
   var multiselectID = 0;
@@ -79,14 +82,14 @@
           .addClass('ui-helper-reset')
           .html(function() {
             if(o.header === true) {
-              return '<li><a class="ui-multiselect-all" href="#"><span class="ui-icon ui-icon-check"></span><span>' + o.checkAllText + '</span></a></li><li><a class="ui-multiselect-none" href="#"><span class="ui-icon ui-icon-closethick"></span><span>' + o.uncheckAllText + '</span></a></li>';
+              return '<li><a class="ui-multiselect-all" href="#"><span class="icheckbox_minimal-green-inverted"></span><span>' + o.checkAllText + '</span></a></li><li><a class="ui-multiselect-none" href="#"><span class="icheckbox_minimal-green-inverted"></span><span>' + o.uncheckAllText + '</span></a></li>';
             } else if(typeof o.header === "string") {
               return '<li>' + o.header + '</li>';
             } else {
               return '';
             }
           })
-          .append('<li class="ui-multiselect-close"><a href="#" class="ui-multiselect-close"><span class="ui-icon ui-icon-circle-close"></span></a></li>')
+          .append('<li class="ui-multiselect-close"><a href="#" class="ui-multiselect-close"><span class=""></span></a></li>')
           .appendTo(header),
 
         checkboxContainer = (this.checkboxContainer = $('<ul />'))
@@ -167,7 +170,7 @@
           labelClasses.push('ui-state-active');
         }
 
-        html += '<li class="' + liClasses + '">';
+        html += '<li class="select-option">';
 
         // create the label
         html += '<label for="' + inputID + '" title="' + title + '" class="' + labelClasses.join(' ') + '">';
@@ -186,7 +189,7 @@
         }
 
         // add the title and close everything off
-        html += ' /><span>' + description + '</span></label></li>';
+        html += ' /><span class = "icheckbox_minimum-green icheckbox_square-green"></span><span class="select-option-label">' + description + '</span></label></li>';
       });
 
       // insert into the DOM
