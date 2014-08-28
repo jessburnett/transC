@@ -1,22 +1,34 @@
-<!DOCTYPE html>
+<!DOCTYPE
+ html>
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>jQuery MultiSelect Widget Demo</title>
 
-<link rel="stylesheet" href="../../themes/base/jquery.ui.all.css">
+<link rel="stylesheet" href="../../themes/base/jquery.ui.all.css" type="text/css">
 	<script src="../../jquery-1.8.2.js"></script>
 	<script src="../../ui/jquery.ui.core.js"></script>
 	<script src="../../ui/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="assets/prettify.js"></script>
 	<script src="../../ui/jquery.multiselect.js"></script>
 	<script src="../../ui/jquery.multiselect.filter.js"></script>
-	<link rel="stylesheet" href="../demos.css">
-	<link rel="stylesheet" href="../../themes/base/jquery.ui.theme-override.css">
-	<link rel="stylesheet" href="../../themes/base/jquery.ui.multiselect.css">
-	<link rel="stylesheet" href="../../themes/base/jquery.ui.multiselect.filter.css">
-	<link rel="stylesheet" type="text/css" href="assets/style.css" />
-    <link rel="stylesheet" type="text/css" href="assets/prettify.css" />
-<script type="text/javascript" src="assets/prettify.js"></script>
+	<script src="../../ui/icheck.js"></script>
+	<link rel="stylesheet" href="../demos.css" type="text/css">
+	<link rel="stylesheet" href="../../themes/base/jquery.ui.theme-override.css" type="text/css">
+	<link rel="stylesheet" href="../../themes/base/jquery.multiselect.css">
+	<link rel="stylesheet" href="../../themes/base/jquery.multiselect.filter.css" type="text/css">
+	<link rel="stylesheet" href="../../themes/base/minimal/green.css" type="text/css">
+	<script>
+    	$(document).ready(function(){
+  	$('input').iCheck({
+    checkboxClass: 'icheckbox_minimal-green',
+    radioClass: 'iradio_minimal',
+    increaseArea: '20%' // optional
+  });
+});
+</script>
+    
+
 </head>
 <body onload="prettyPrint();">
 
@@ -30,8 +42,8 @@ $("select").multiselect().multiselectfilter();
 
 <form style="margin:20px 0">
 	<p>
-		<select multiple="multiple" style="width:370px">
-		<option value="red">Red</option>
+		<select multiple="multiple">
+		<option value="red">Capacity Restraint</option>
 		<option value="green">Green</option>
 		<option value="blue">Blue</option>
 		<option value="orange">Orange</option>
@@ -41,22 +53,8 @@ $("select").multiselect().multiselectfilter();
 		<option value="black">Black</option>
 		</select>
 	</p>
-	<p>
-		<select multiple="multiple" style="width:370px">
-		<optgroup label="test">
-			<option value="red">Red</option>
-			<option value="green">Green</option>
-			<option value="blue">Blue</option>
-		</optgroup>
-		<optgroup label="foo">
-			<option value="orange">Orange</option>
-			<option value="purple">Purple</option>
-			<option value="yellow">Yellow</option>
-			<option value="brown">Brown</option>
-			<option value="black">Black</option>
-		</optgroup>
-		</select>
-	</p>
+
+
 </form>
 
 <h3>Options:</h3>
