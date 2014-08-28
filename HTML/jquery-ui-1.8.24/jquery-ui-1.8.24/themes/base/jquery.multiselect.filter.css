@@ -1,0 +1,25 @@
+.ui-multiselect-hasfilter ul { position:relative; }
+
+.ui-multiselect-filter input {
+width: 198px;
+font-size: 11px;
+color: #666;
+padding: 3px 3px 3px 7px;
+margin-left: -4px;
+margin-top: -3px;
+border: 1px solid #07993a;
+-webkit-appearance: textfield;
+-webkit-box-sizing: content-box;
+-moz-appearance: textfield;
+box-sizing: content-box;
+}
+
+input[type=checkbox] { display: none; }
+
+.ui-multiselect, span, label { font:normal 11.5px/11.5px roboto-reg,arial,helvetica,sans-serif; }
+
+.ui-state-hover { background: #fff; }
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { background: #fff; font-weight: normal/*{fwDefault}*/; color: #555/*{fcHover}*/; }
+
+span, label {  padding: 2px; }
