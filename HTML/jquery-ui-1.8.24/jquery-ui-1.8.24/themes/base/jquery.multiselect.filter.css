@@ -24,5 +24,3 @@ input[type=checkbox] {
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { background: #fff; font-weight: normal/*{fwDefault}*/; color: #555/*{fcHover}*/; }
 
 span, label {  padding: 2px; }
-
-.ui-icon, .ui-widget-header .ui-icon, .ui-widget-content .ui-icon { bacground-image: url('blah.ig'); }
