@@ -1,10 +1,10 @@
-.ui-multiselect-hasfilter ul { position:relative; top:2px }
+.ui-multiselect-hasfilter ul { position:relative; }
 /*.ui-multiselect-filter { margin-right:7px; font-size:11px; margin-bottom: 7px;}*/
 .ui-multiselect-filter input {
 width: 198px;
 font-size: 11px;
 color: #666;
-height: 20px;
+/*height: 20px;C*/
 padding: 3px 3px 3px 7px;
 margin-left: -4px;
 margin-top: -3px;
@@ -17,10 +17,12 @@ input[type=checkbox] {
     display: none;
 }
 .ui-multiselect, span, label { 
-  font:normal 12px/12px roboto-reg,arial,helvetica,sans-serif; 
+  font:normal 11.5px/11.5px roboto-reg,arial,helvetica,sans-serif; 
 }
 .ui-state-hover { background: #fff; }
 
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { background: #fff; font-weight: normal/*{fwDefault}*/; color: #555/*{fcHover}*/; }
 
 span, label {  padding: 2px; }
+
+.ui-icon, .ui-widget-header .ui-icon, .ui-widget-content .ui-icon { bacground-image: url('blah.ig'); }
